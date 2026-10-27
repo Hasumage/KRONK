@@ -1,0 +1,52 @@
+{
+  "name": "kronk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Персональный Telegram ИИ-ассистент",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "check:public": "node scripts/check-public.mjs",
+    "build": "tsc",
+    "start": "node dist/main.js demo",
+    "serve": "node dist/main.js serve",
+    "business": "node dist/business-main.js",
+    "business:oauth": "node dist/business-oauth.js",
+    "inspect": "node dist/main.js inspect",
+    "login": "node dist/main.js login",
+    "oauth": "node dist/main.js oauth",
+    "backup": "node dist/main.js backup",
+    "test": "npm run build && tsc --noEmit -p tsconfig.tests.json && vitest run --maxWorkers=1",
+    "verify": "npm run check && npm test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/luxon": "^3.7.6",
+    "@types/node": "^26.6.5",
+    "jszip": "^3.10.2",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "big-integer": "^1.6.52",
+    "dotenv": "^18.0.9",
+    "google-auth-library": "^10.9.1",
+    "grammy": "^1.46.0",
+    "ipaddr.js": "^2.5.0",
+    "luxon": "^3.7.2",
+    "mammoth": "^1.13.0",
+    "openai": "^7.43.0",
+    "pdf-parse": "^2.4.5",
+    "pino": "^10.4.0",
+    "playwright": "^1.64.1",
+    "telegram": "^2.26.22",
+    "zod": "^4.6.7"
+  }
+}

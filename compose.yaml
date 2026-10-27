@@ -1,0 +1,16 @@
+services:
+  kronk:
+    build: .
+    env_file: .env
+    ports:
+      - '127.0.0.1:3000:3000'
+    volumes:
+      - ./data:/app/data
+    init: true
+    restart: 'no'
+    # Реальный запуск только после настройки: command: ["node", "dist/main.js", "serve", "--live"]
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    shm_size: 256mb

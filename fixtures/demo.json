@@ -1,0 +1,157 @@
+{
+  "messages": [
+    {
+      "ref": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "101"
+      },
+      "senderId": "2",
+      "direction": "incoming",
+      "text": "29 октября, 18:30, встречаемся в центре, адрес пришлю позже",
+      "sentAt": "2026-10-25T20:00:00+03:00",
+      "replyTo": null,
+      "generatedByAssistant": false,
+      "attachment": null
+    },
+    {
+      "ref": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "102"
+      },
+      "senderId": "1",
+      "direction": "outgoing",
+      "text": "Да, буду",
+      "sentAt": "2026-10-25T20:00:00+03:00",
+      "replyTo": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "101"
+      },
+      "generatedByAssistant": false,
+      "attachment": null
+    },
+    {
+      "ref": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "103"
+      },
+      "senderId": "1",
+      "direction": "outgoing",
+      "text": "Да, буду, занесу в календарь",
+      "sentAt": "2026-10-25T20:00:00+03:00",
+      "replyTo": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "101"
+      },
+      "generatedByAssistant": false,
+      "attachment": null
+    },
+    {
+      "ref": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "104"
+      },
+      "senderId": "2",
+      "direction": "incoming",
+      "text": "Подготовь список вопросов для встречи",
+      "sentAt": "2026-10-25T20:00:00+03:00",
+      "replyTo": null,
+      "generatedByAssistant": false,
+      "attachment": null
+    },
+    {
+      "ref": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "105"
+      },
+      "senderId": "1",
+      "direction": "outgoing",
+      "text": "Добавлю себе в задачник",
+      "sentAt": "2026-10-25T20:00:00+03:00",
+      "replyTo": {
+        "accountId": "1",
+        "chatId": "10",
+        "messageId": "104"
+      },
+      "generatedByAssistant": false,
+      "attachment": null
+    }
+  ],
+  "analyses": {
+    "102": {
+      "intent": "none",
+      "confidence": 0.99,
+      "explicitUserIntent": false,
+      "evidence": null,
+      "attendance": "accepted",
+      "requiresClarification": false,
+      "question": null,
+      "sourceMessageIds": ["102"],
+      "data": {
+        "title": null,
+        "description": null,
+        "startAt": null,
+        "endAt": null,
+        "location": null,
+        "dueAt": null,
+        "targetId": null,
+        "url": null,
+        "documentMessageId": null,
+        "topic": null,
+        "knowledgeId": null
+      }
+    },
+    "103": {
+      "intent": "calendar.create",
+      "confidence": 0.99,
+      "explicitUserIntent": true,
+      "evidence": "занесу в календарь",
+      "attendance": "accepted",
+      "requiresClarification": false,
+      "question": null,
+      "sourceMessageIds": ["101", "103"],
+      "data": {
+        "title": "Встреча",
+        "description": null,
+        "startAt": "2026-10-29T18:30:00+03:00",
+        "endAt": null,
+        "location": null,
+        "dueAt": null,
+        "targetId": null,
+        "url": null,
+        "documentMessageId": null,
+        "topic": null,
+        "knowledgeId": null
+      }
+    },
+    "105": {
+      "intent": "task.create",
+      "confidence": 0.99,
+      "explicitUserIntent": true,
+      "evidence": "Добавлю себе в задачник",
+      "attendance": "accepted",
+      "requiresClarification": false,
+      "question": null,
+      "sourceMessageIds": ["104", "105"],
+      "data": {
+        "title": "Подготовить список вопросов для встречи",
+        "description": null,
+        "startAt": null,
+        "endAt": null,
+        "location": null,
+        "dueAt": null,
+        "targetId": null,
+        "url": null,
+        "documentMessageId": null,
+        "topic": null,
+        "knowledgeId": null
+      }
+    }
+  }
+}
